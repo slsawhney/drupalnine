@@ -4,13 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.article.body
-    - field.field.node.article.comment
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
     - image.style.thumbnail
     - node.type.article
   module:
-    - comment
     - image
     - path
     - text
@@ -31,21 +29,15 @@ content:
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-  comment:
-    type: comment_default
-    weight: 20
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   field_image:
     type: image_image
-    weight: 4
+    weight: 3
     region: content
     settings:
       progress_indicator: throbber
@@ -53,33 +45,33 @@ content:
     third_party_settings: {  }
   field_tags:
     type: options_buttons
-    weight: 3
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 15
+    weight: 4
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 120
+    weight: 7
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 16
+    weight: 5
     region: content
     settings:
       display_label: true
@@ -93,13 +85,9 @@ content:
       placeholder: ''
     third_party_settings: {  }
   uid:
-    type: entity_reference_autocomplete
-    weight: 5
+    type: options_buttons
+    weight: 8
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
 hidden: {  }
